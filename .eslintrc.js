@@ -68,7 +68,7 @@ module.exports = {
     'react/prefer-stateless-function': 1,
     'react/require-default-props': 1, // 289 TODO: remove
     'react/button-has-type': 0,
-    'react/prop-types': 1,
+    'react/prop-types': 0,
     'react-hooks/rules-of-hooks': 2,
     'react-hooks/exhaustive-deps': 1,
     camelcase: 'off', // Needs tobe disabled to avoid incorrect matches from @typescript-eslint/camelcase
