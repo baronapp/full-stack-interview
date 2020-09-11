@@ -2,10 +2,11 @@ import React, { Component } from "react";
 
 import SnapsList from "./SnapsList";
 import "./styles/App.css";
+import { Snap } from "./types";
 
 type AppState = {
-  snaps:
-}
+  snaps: Snap[];
+};
 
 class App extends Component<any, any> {
   constructor(props) {
