@@ -1,32 +1,24 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-import SnapsList from "./components/SnapsList";
 import "./styles/App.css";
 import { Snap } from "./types";
+import { SnapList } from "./components/SnapsList";
 
 type AppState = {
   snaps: Snap[];
 };
 
-class App extends Component<void, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      snaps: [],
-    };
-  }
+const App: React.FunctionComponent = () => {
+  const [snaps, setSnaps] = React.useState<AppState["snaps"]>([]);
 
-  onLoadSnaps = (snaps) => this.setState(() => ({ snaps }));
-
-  render() {
-    const { snaps } = this.state;
-
-    return (
-      <div>
-        <SnapsList snaps={snaps} onLoad={this.onLoadSnaps} />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <SnapList
+        snaps={snaps}
+        onLoad={(snapList: Snap[]) => setSnaps(snapList)}
+      />
+    </div>
+  );
+};
 
 export default App;

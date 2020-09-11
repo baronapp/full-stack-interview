@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import fetchData from "../services/fetchData";
 import "../styles/SnapsList.css";
@@ -9,29 +9,21 @@ type SnapListProps = {
   snaps: Snap[];
 };
 
-class SnapsList extends React.PureComponent<SnapListProps> {
-  componentDidMount() {
-    const { onLoad } = this.props;
-
+export const SnapList: React.FunctionComponent<SnapListProps> = (props) => {
+  useEffect(() => {
     fetchData()
-      .then((x) => x.snaps)
-      .then(onLoad)
+      .then((data) => data.snaps)
+      .then(props.onLoad)
       .catch(console.error);
-  }
+  }, []);
 
-  render() {
-    const { snaps } = this.props;
-
-    return (
-      <div>
-        {snaps.length ? (
-          <p>{JSON.stringify(snaps)}</p>
-        ) : (
-          <p>Loading snaps...</p>
-        )}
-      </div>
-    );
-  }
-}
-
-export default SnapsList;
+  return (
+    <div>
+      {props.snaps.length ? (
+        <p>{JSON.stringify(props.snaps)}</p>
+      ) : (
+        <p>Loading snaps...</p>
+      )}
+    </div>
+  );
+};
