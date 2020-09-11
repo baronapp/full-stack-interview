@@ -1,8 +1,8 @@
 import React from "react";
 
-import fetchData from "./services/fetchData";
-import "./styles/SnapsList.css";
-import { Snap } from "./types";
+import fetchData from "../services/fetchData";
+import "../styles/SnapsList.css";
+import { Snap } from "../types";
 
 type SnapListProps = {
   onLoad: (snaps: Snap[]) => void;

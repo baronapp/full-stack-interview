@@ -31,7 +31,8 @@
   },
   "scripts": {
     "start": "react-scripts start -- TSC_COMPILE_ON_ERROR=true",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "type-check": "tsc --project tsconfig.json"
   },
   "eslintConfig": {
     "extends": "react-app"

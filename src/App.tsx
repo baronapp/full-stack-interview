@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import SnapsList from "./SnapsList";
+import SnapsList from "./components/SnapsList";
 import "./styles/App.css";
 import { Snap } from "./types";
 
