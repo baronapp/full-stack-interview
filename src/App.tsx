@@ -8,7 +8,7 @@ type AppState = {
   snaps: Snap[];
 };
 
-class App extends Component<any, any> {
+class App extends Component<void, AppState> {
   constructor(props) {
     super(props);
     this.state = {
