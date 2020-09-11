@@ -5,6 +5,7 @@ This is a Cameo full stack interview. This interview is flexible, and intends to
 Let's build something cool.
 
 `npm i`
+
 `npm start`
 
 ### Dependencies
