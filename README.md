@@ -1,6 +1,6 @@
 # Full Stack Interview
 
-This is a Cameo full stack interview. This interview is flexible, and intends to simulate an environment you would normally code in.
+This is a Cameo full stack interview, focusing more heavily on front end. This interview is flexible, and intends to simulate an environment you would normally code in.
 
 The app skeleton is a typescript create-react-app, but supports standard javascript as well. 
 
